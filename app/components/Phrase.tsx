@@ -2,7 +2,27 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function Phrase({avatar, name, phrase, id, comments}) {
+type PhraseProps = {
+    avatar: string
+    name: string
+    phrase: string
+    id: string,
+    comments?: {
+        createdAt: string
+        id: string
+        phraseId: string
+        userId: string
+        message: string
+        user: {
+            name: string
+            image: string
+            email: string
+            id: string
+        }
+    }[]
+}
+
+export default function Phrase({avatar, name, phrase, id, comments}: PhraseProps) {
     return(
         <div className="bg-white my-8 p-8 rounded-lg">
             <div className="flex items-center gap-2">

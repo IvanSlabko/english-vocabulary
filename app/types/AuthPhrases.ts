@@ -1,5 +1,3 @@
-import { type } from "os";
-
 export type AuthPhrases = {
     email: string
     id: string
@@ -16,5 +14,5 @@ export type AuthPhrases = {
             phrase: string
             userId: string
         }
-    }
+    }[]
 }
